@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var obj1 = {name:'tom'};
+        var obj2 = obj1;
+        obj2.age = 12;
+        console.log(obj1);//{name: 'tom', age: 12}
+        console.log(obj2);//{name: 'tom', age: 12}
+        function fn(obj){
+            obj.name = 'bob';
+        }
+        fn(obj1);
+        console.log(obj1.name);//bob
+        console.log(obj2.name);//bob
+
+        function fn1(obj){
+            obj.name = "A";
+        }
+        fn1(obj1);
+        console.log(obj1);
+
+        function fn2(obj){
+            obj = {name:'a',age:15};//此操作将传递进来的地址改变了，不影响obj1的指向
+        }
+        // 将obj1的地址传递给形参obj，
+        fn2(obj1);
+        console.log(obj1);
+
+        // 在js调用函数时传递变量参数时，是值传递还是引用传递。
+            // 1.都是值传递（变量存储的值，基本/地址值）传递。
+            // 2.可能是值传递，也可能是引用传递（地址值）。
+        var a = 3;
+        function fn(a){
+            a++;
+        }
+        fn(a)
+        console.log(a);//3
+
+        //JS引擎如何管理内存
+            // 1.内存生命周期：分配小内存空间，得到他的使用权；存储数据，可以反复进行操作；释放小内存空间
+            // 2.释放空间: 局部变量：函数执行完自动释放。对象：成为垃圾对象=》垃圾回收器回收；
+        
+        var b = 3;
+        var obj3 = {}
+        // obj3 = undefined;
+        console.log(b,obj3);
+        function fn3(b){
+            b = {}
+        }
+        fn3();
+
+    </script>
+</body>
+</html>

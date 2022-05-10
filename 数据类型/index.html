@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+        1.数据类型：
+            基础数据类型：Number,String,undefined,null,boolean
+            对象类型：
+            Object:任意对象
+            Function：一种特别的对象(可以执行) 
+            Array：一种特别的对象（数值下标，内部数据是有序的）
+        2.判断：
+            typeof:
+                可以判断undefined
+            instanceof:判断对象的具体类型
+            ===
+                可以判断：undefined;
+    */
+    //1.基本
+    //typeof返回数据类型的字符串表达
+    var a ;
+    console.log(a,typeof a,typeof a === a,typeof a === 'undefined');//undefined 'undefined' false true
+    var b = 3;
+    console.log(typeof b === 'number' , typeof b , b);
+    a = 'liu';
+    console.log(typeof a) //string 
+    a = null;
+    console.log(typeof a)//object
+</script>
+</html>

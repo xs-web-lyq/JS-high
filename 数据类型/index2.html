@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.undefined 与 null的区别？
+            * undefined 代表定义未赋值
+            * null 定义了赋值未null.
+        2.什么时候给变量赋值为null呢
+            * 初始赋值，表明将要赋值为对象
+            * 结束时，让对象成为垃圾对象（被垃圾回收器回收）
+        3.严格区别变量类型与数据类型
+            * 数据类型
+                * 基本类型
+                * 对象类型
+            * 变量类型
+                * 基本类型
+                * 引用类型
+     -->
+
+<script>
+    // 
+    // 类型：类型对象
+
+    function Person(name,age){
+        this.name = name;
+        this.age  = age;
+    }
+    var p = new Person('tom',18);
+
+    // 1.undefined 和 null 的区别
+    var a ;
+    console.log(a);//undefined
+    a = null;
+    console.log(a); // null
+    console.log(typeof a); // object
+
+    var b = null; // 表明b将要被赋值为对象
+    b = ['atom',18];
+    b = null ; // 表明b指向为空，释放数组，使垃圾回收器回收数组；
+</script>
+</body>
+</html>
