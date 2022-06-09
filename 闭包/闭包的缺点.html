@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1.缺点
+            * 函数执行完后，函数内部的局部变量没有释放，占用内存事件会变长
+            * 容易造成内存泄漏
+        3.解决
+            * 能不用闭包就不用
+            * 及时释放
+     -->
+</body>
+<script>
+    // 内存溢出就是内存不够用了
+
+    // 2.内存泄漏
+        // 意外的全局变量
+        // 没有及时清理计时器的回调函数
+        // 闭包
+    function fn(){
+        a = 2 //没有修饰符， var ,let ,const,定义的变量就是window的属性
+        console.log(a);
+    }
+    fn()
+
+    var timer = setInterval(function(){ //启动循环定时器后不清理
+        console.log('--------');
+    },1000)
+    clearInterval(timer)
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 代码片段1
+        var name1  = "The Window"
+        var object1 = {
+            name1: "The Object",
+            getNameFunc:function(){
+                return function(){
+                    return this.name1;
+                }
+            }
+        }
+
+        // 因为object1.getNameFunc()执行后返回值为一个函数，一个函数执行其this指向为window
+        alert(object1.getNameFunc()()) // The Window
+
+
+        // 代码片段2
+        var name2  = "The Window"
+        var object2 = {
+            name2: "The Object",
+            getNameFunc:function(){
+                var that = this
+                return function(){
+                    return that.name2;
+                }
+            }
+        }
+        // object2.getNameFunc()执行完getNameFunc()的this指向为object2,将this指向赋值给了that
+        alert(object2.getNameFunc()()) // The Window
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

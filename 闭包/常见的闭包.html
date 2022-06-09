@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+     -->
+
+     <script>
+         function fn1(){
+             var a = 2
+             function fn2(){
+                 a++
+                 console.log(a);
+             }
+             return fn2
+         }
+         var f = fn1()
+         f()//3
+         f()//4
+
+        //  2.将函数作为实参传递给另一个函数调用
+         function showDelay(msg,time){
+             setTimeout(function(){
+                alert(msg);//setTimeout第一个参数为函数，其内部使用了msgx形成闭包
+             },time)
+         }
+         showDelay('爱你',1000)
+     </script>
+</body>
+</html>
