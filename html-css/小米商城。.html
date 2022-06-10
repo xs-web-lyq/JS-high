@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .over {
+            width:1254px;
+            /* height:463px; */
+            margin:0 auto;
+            border: 1px solid #000;
+
+        }
+        .clearfix::after{
+            content:"";
+            display: block;
+            height:0;
+            visibility: hidden;
+            clear: both;
+        }
+        .over .nav {
+            width:400px;
+            height:462px;
+            margin-left:6px;
+            float: left;
+            background-color: aliceblue;
+        }
+        img {
+            width:100%;
+        }
+        .dec {
+            width:400px;
+            text-align: center;
+        }
+        .dec .name {
+            display: block;
+            margin-top:25px;
+            font-size: 22px;
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color:#000;
+            text-decoration: none;
+        }
+        .dec .info {
+            font-size: 14px;
+            line-height: 24px;
+            height:24px;
+            color:#666;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .dec .info em{
+            font-style: normal;
+            margin:0 5px;
+        }
+        .dec .price {
+            margin-top:7px;
+            font-size: 24px;
+            color:red;
+        }
+        .dec .price em {
+            font-style:normal;
+            font-size: 14px;
+        }
+        
+        .dec .price span:nth-last-child(1){
+            font-size: 14px;
+            color:#000;
+            text-decoration: line-through;
+        }
+        .dec .btn {
+            display: block;
+            width:160px;
+            height:44px;
+            line-height: 44px;
+            text-decoration: none;
+            margin:5px auto;
+            font-size: 18px;
+            background-color: red;
+            color:aliceblue;
+            border:none;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class = "over clearfix">
+        <div class = "nav">
+            <a href="#"><img src="img2.jpg" alt=""></a>
+            <div class = 'dec'>
+                <a href="#" class = "name">Redmi Note 11T Pro </a>
+                <p class = "info">天玑8100<em>|</em>真旗舰芯</p>
+                <p class = "price"><span>￥</span><span>1699<em>起</em></span> <span>¥1799起</span></p>
+                <a href="#" class = "btn">立即购买</a>
+            </div>
+        </div>
+        <div class = "nav">
+            <a href="#"><img src="img2.jpg" alt=""></a>
+            <div class = 'dec'>
+                <a href="#" class = "name">Redmi Note 11T Pro </a>
+                <p class = "info">天玑8100<em>|</em>真旗舰芯</p>
+                <p class = "price"><span>￥</span><span>1699<em>起</em></span> <span>¥1799起</span></p>
+                <a href="#" class = "btn">立即购买</a>
+            </div>
+        </div>
+        <div class = "nav">
+            <a href="#"><img src="img2.jpg" alt=""></a>
+            <div class = 'dec'>
+                <a href="#" class = "name">Redmi Note 11T Pro </a>
+                <p class = "info">天玑8100<em>|</em>真旗舰芯</p>
+                <p class = "price"><span>￥</span><span>1699<em>起</em></span> <span>¥1799起</span></p>
+                <a href="#" class = "btn">立即购买</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
