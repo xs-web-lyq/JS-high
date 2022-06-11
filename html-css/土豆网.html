@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box {
+            position: relative;
+            width:400px;
+            height:300px;
+            margin:100px auto;
+        }
+        .box img {
+            width:400px;
+            height:300px;
+        }
+        .box .mask {
+            position: absolute;
+            top:0;
+            left:0;
+            width:400px;
+            height:300px;
+            background: rgba(0,0,0,0.5);
+            display: none;
+        }
+        .box:hover .mask{
+            display: block;
+        }
+        .box button {
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-25px;
+            margin-left:-7px;
+            background: rgba(0,0,0,0);
+            border:50px solid transparent;
+            border-left:50px solid #000;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img1.jpg" alt="">
+        <div class="mask"> 
+            <button></button>
+        </div>
+       
+    </div>
+</body>
+</html>
